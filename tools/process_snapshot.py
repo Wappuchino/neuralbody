@@ -92,7 +92,7 @@ def extract_mask(masks, mask_dir):
 
 
 data_root = 'data/people_snapshot'
-videos = ['female-3-casual']
+videos = sys.argv[1] if len(sys.argv) >= 2 else ['female-3-casual']
 
 model_paths = [
     'basicModel_f_lbs_10_207_0_v1.0.0.pkl',
