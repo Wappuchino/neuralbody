@@ -91,7 +91,7 @@ def extract_mask(masks, mask_dir):
         cv2.imwrite(os.path.join(mask_dir, '{}.png'.format(i)), mask)
 
 
-data_root = 'data/people_snapshot'
+data_root = sys.argv[2] if len(sys.argv) >= 3 else 'data/people_snapshot'
 videos = sys.argv[1].split(",") if len(sys.argv) >= 2 else ['female-3-casual']
 
 model_paths = [
